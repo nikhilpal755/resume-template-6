@@ -11,12 +11,13 @@ const Skills = () => {
     level: '25',
   }
   const [skills, setSkills] = useState(ctx.getComponentData('Skills'))
-  const handleChange = (i, e) => {
+  const handleChange = (i, e) => {  
     const targetName = e.target.name
-    const modifiedItem = {
-      ...skills.items[i],
-      [targetName]: e.target.value,
-    }
+    // console.log(targetName, e.target.value)
+      const modifiedItem = {
+        ...skills.items[i],
+        [targetName]: e.target.value,
+      }
     skills.items.splice(i, 1, modifiedItem)
   }
   const handleAddClick = () => {
@@ -33,7 +34,10 @@ const Skills = () => {
       ),
     })
   }
-  const handleSaveClick = () => ctx.updateInfo(skills)
+  const handleSaveClick = () => {
+    // console.log(skills)
+    ctx.updateInfo(skills)
+  }
   return (
     <div className='pt-10'>
       <ToggleButton

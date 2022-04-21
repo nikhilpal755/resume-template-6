@@ -13,8 +13,8 @@ export const Right = () => {
     <View style={styles.section__right}>
       <About text={ctx.getComponentData('Profile').about} />
       <EmploymentHistory items={ctx.getComponentData('Employment').items} />
-      <KeySkills skills={ctx.getComponentData('KeySkills')} />
-      <Projects projects={ctx.getComponentData('Projects')} />
+      {/* <KeySkills skills={ctx.getComponentData('KeySkills')} /> */}
+      {/* <Projects projects={ctx.getComponentData('Projects')} /> */}
     </View>
   )
 }

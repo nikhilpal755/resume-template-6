@@ -10,7 +10,7 @@ const About = ({ text }) => (
         fontSize: '15',
       }}
     >
-      Professional Summary
+      Objective
     </Text>
     <Divider />
     <Text style={styles.main__text}>{text}</Text>

@@ -12,11 +12,13 @@ function App() {
       {
         type: 'Profile',
         name: 'John Doe',
-        profession: 'Junior Developer',
+        profession: 'CYBER SECURITY ENGINEER',
         profileImageURL: 'https://i.imgur.com/f6L6Y57.png',
         display: true,
         about:
-          'Recent college graduate with experience in various areas of software engineering, including infrastructure and data analytics. A fast learner who thrives on generating innovative ideas, trouble-shooting and problem-solving, and working with object-oriented programming languages including Python and Java. ',
+          `Recent college graduate with experience in various areas of software engineering, including infrastructure and data analytics. A fast learner who thrives on generating innovative ideas, trouble-shooting and problem-solving, and working with object-oriented programming languages including Python and Java.\n\n
+          Recent college graduate with experience in various areas of software engineering, including infrastructure and data analytics. A fast learner who thrives on generating innovative ideas, trouble-shooting and problem-solving, and working with object-oriented programming languages including Python and Java.
+        `,
       },
 
       {
@@ -31,10 +33,10 @@ function App() {
         ],
       },
       {
-        header: 'Key Skills',
-        type: 'KeySkills',
-        display: true,
-        text: '• Knowledge of basic coding languages including C++, HTML5, and JavaScript.\n• Basic knowledge of  SQL, NoSQL databases\n• Knowledgable on Node.js, Spring, Hibernate\n• Extensive Linux/Unix experience\n• Software testing (Jest, Chai, Mocha)\n• CI/CD Basics ',
+        header: 'Specialization',
+        type: 'Specialization',
+        display: false,
+        items: ['• Knowledge of basic coding languages including C++, HTML5, and JavaScript.', 'Basic knowledge of  SQL, NoSQL databases', '• Knowledgable on Node.js, Spring, Hibernate', '• Extensive Linux/Unix experience', '• Software testing (Jest, Chai, Mocha)'],
       },
       {
         header: 'Employment History',
@@ -42,16 +44,20 @@ function App() {
         display: true,
         items: [
           {
-            position: 'Software Engineer - Bank of E-Corp',
-            date: 'Mar 2017 - Dec 2019',
+            position: 'Software Engineer',
+            company: 'Google',
+            from: 'Jan 2019',
+            to: 'Present',
             description:
               'Bank of E-Corp is a Banking Financial Institution in the US.\nAs a Software Engineer, I work on their banking platform in an Agile environment.\n My daily responsibilities include: ',
             responsibilities:
               '• Participating in daily stand up meetings, led by our Scrum Master\n • Utilizing the MEAN stack to enhance and maintain our banking platform \n• Conducting code peer reviews with other members in my team\n• Participating in product demos\n• Documenting all code changes',
           },
           {
-            position: 'Junior Software Developer - Steel Mountain',
-            date: 'Mar 2015 - Dec 2016',
+            position: 'Junior Software Developer',
+            company: 'Steel Mountain',
+            from: 'Jan 2018',
+            to: 'Mar 2018',
             description:
               'Bank of E Network is a Banking Financial Institution in the US.\nAs a Software Developer, I work on their banking platform in an Agile environment.\n My daily responsibilities include: ',
             responsibilities:
@@ -62,7 +68,7 @@ function App() {
       {
         header: 'Projects',
         type: 'Projects',
-        display: true,
+        display: false,
         items: [
           {
             name: 'Poker Simulator',
@@ -80,7 +86,19 @@ function App() {
           {
             text: 'Python',
             level: '25%',
-          },
+          },{
+            text: 'C++',
+            level:'75%'
+          },{
+            text: 'Meeting Prepartation',
+            level: '90%'
+          },{
+            text: 'Technical Consulting',
+            level: '80%'
+          },{
+            text: 'Agile',
+            level: '85%'
+          }
         ],
       },
       {
@@ -131,16 +149,33 @@ function App() {
         display: true,
         items: [
           {
-            text: '+61 01 012121',
-          },
-          {
             text: 'eliot@example.com',
           },
           {
-            text: 'www.eliotdev.com',
+            text: '+61 01 0121213432',
           },
+          {
+            text: 'Texas, USA',
+          },{
+            text: 'www.linkedin.com/in/nikhil'
+          }
         ],
-      },
+      },{
+        header: 'Languages',
+        type: 'Languages',
+        items: [
+          {
+            text: 'English',
+            level: '100%',
+          },{
+            text: 'Hindi',
+            level: '70%',
+          },{
+            text: 'French',
+            level: '50%',
+          }
+        ]
+      }
     ],
   })
   const getComponentData = (type) => {
@@ -158,6 +193,7 @@ function App() {
       (elem) => elem.type === item.type
     )
     infoState.components.splice(targetIndex, 1, item)
+    // console.log(infoState.components)
     setForce(force + 1)
   }
 

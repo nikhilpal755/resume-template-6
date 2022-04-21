@@ -1,13 +1,15 @@
 import { View } from '@react-pdf/renderer'
 
-const Divider = () => (
+const Divider = ({top}) => (
   <View
     style={{
-      height: '1px',
-      marginTop: '13px',
-      marginBottom: '12px',
+      height: '1.5px',
+      marginTop: '8px',
+      marginBottom: '5px',
+      marginLeft: top? '4px': '0px',
+      marginRight: top? '8px': '0px',
       width: '100%',
-      backgroundColor: '#084c41',
+      backgroundColor: '#A13D2D',
     }}
   ></View>
 )
